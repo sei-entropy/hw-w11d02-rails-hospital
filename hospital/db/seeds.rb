@@ -8,7 +8,7 @@
 
 
 
-Patient.create(id:1, first_name "Hello ",last_name:"", diagnosis:"Hr", born_on:02/02/2020)
 
-Patient.create(id:2, first_name "Hello ",last_name:"", diagnosis:"Hr", born_on:02/02/2020)
+Patient.create(first_name: "Rina ",last_name:"Hell", diagnosis:"Hr", born_on: '2015-12-08')
 
+#Patient.create(first_name "lama",last_name:"Hel", diagnosis:"Hr", born_on:02/02/2020)
