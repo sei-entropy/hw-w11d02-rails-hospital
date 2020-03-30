@@ -1,0 +1,10 @@
+<h2> Patient index</h2>
+<% @Patients.each do |one_patient|%>
+<div>
+<%= one_patient.id %>
+<%=  one_patient.first_name  %>
+<%= one_patient.last_name %>
+<%= one_patient.diagnosis %>
+<%= one_patient.born_on %>
+</div>
+<% end %>
