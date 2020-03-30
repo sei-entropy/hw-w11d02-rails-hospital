@@ -1,20 +1,20 @@
 class PatientsController < ApplicationController
      def show
-    @Patient = Patient.find(params[:id])
+    @patient = Patient.find(params[:id])
     end
     def index 
-      @Patients = Patient.all  
+      @patients = Patient.all  
     end
     def new
-        @Patient = Patient.new
+        @patient = Patient.new
     end
     def create 
-        @Patient = Patient.new(Patient_params)
-        @Patient.save
-        redirect_to @Patient
+        @patient = Patient.new(patient_params)
+        @patient.save
+        redirect_to @patient
     end
     private 
-    def Patient_params
-        params.require(:Patient).permit(:first_name,:last_name,:diagnosis,:born_on)
+    def patient_params
+        params.require(:patient).permit(:first_name,:last_name,:diagnosis)
     end
 end
