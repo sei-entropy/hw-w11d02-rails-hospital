@@ -13,8 +13,17 @@ class PatientsController < ApplicationController
         @patient.save
         redirect_to @patient
     end
+    def edit
+    @patient = Patient.find(params[:id])
+  end
+    def destroy
+  @patient = Patient.find(params[:id])
+  @patient.destroy
+  redirect_to @patient
+end
     private 
     def patient_params
         params.require(:patient).permit(:first_name,:last_name,:diagnosis)
     end
+
 end
