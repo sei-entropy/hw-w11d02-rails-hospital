@@ -1,0 +1,22 @@
+<% content_for :page_title,  "Index" %>
+
+<div class="section">
+	<div class="container">
+		<% @patients.each do |patient| %>
+			<div class="card">
+		  <div class="card-content">
+		    <div class="media">
+		      <div class="media-content">
+		        <p class="title is-4"><%= link_to patient.first_name, patient  %></p>
+		      </div>
+		    </div>
+		    <div class="content">
+		     	<%= patient.diagnosis %>
+		    </div>
+		    <div class="comment-count">
+		    </div>
+		  </div>
+		</div>
+		<% end %>
+	</div>
+</div>

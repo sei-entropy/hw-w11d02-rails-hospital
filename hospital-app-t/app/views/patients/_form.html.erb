@@ -1,0 +1,26 @@
+<div class="section">
+<%= simple_form_for @patient do |f| %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :first_name, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :last_name, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+    <div class="field">
+    <div class="control">
+      <%= f.input :diagnosis, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.input :born_on, input_html: { class: 'date' }, wrapper: false, label_html: { class: 'label' }  %>
+    </div>
+  </div>
+  <%= f.button :submit, 'Add new patient', class: "button is-primary" %>
+<% end %>
+</div>
