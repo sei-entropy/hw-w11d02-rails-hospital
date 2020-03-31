@@ -1,0 +1,20 @@
+<h2> Patient index</h2>
+<% @patients.each do |one_patient|%>
+<div>
+<%= one_patient.id %>
+<%=  one_patient.first_name  %>
+<%= one_patient.last_name %>
+<%= one_patient.diagnosis %>
+<%= one_patient.born_on %>
+</div>
+<%= link_to 'Show', patient_path(one_patient) %>
+<%
+=begin%>
+ <%= link_to 'Edit', edit_patient_path(one_patient) %> 
+<%
+=end%>
+<%= link_to 'Destroy', delete_patient_path(one_patient),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+              </div>
+<% end %>
