@@ -8,6 +8,9 @@ class PatientsController < ApplicationController
   end
 
   def destroy
+    @patient = Patient.find(params[:id]).delete
+
+    redirect_to root_path
   end
 
   def update
