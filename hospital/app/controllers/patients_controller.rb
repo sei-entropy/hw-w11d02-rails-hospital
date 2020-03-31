@@ -28,7 +28,7 @@ def new
       end
       def update
         patient = Patient.find(params[:id])
-        patient.update(params.require(:patient).permit(:name, :albums, :hometown, :img))
+        patient.update(params.require(:patient).permit(:first_name, :last_name, :diagnosis, :born_on))
           
         redirect_to patient
       end
