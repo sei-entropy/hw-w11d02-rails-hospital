@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'patients', to: 'patients#index'
   get 'patients/destroy'
-  get 'patients/update'
+  # get 'patients/update'
+  get 'patients/edit/:id', to: 'patients#edit', as: 'edit'
+  patch 'patients/:id', to: 'patients#update'
   get 'patients/new' 
   post 'patients', to: 'patients#create'
   get 'patients/:id', to: "patients#show", as: 'patient'

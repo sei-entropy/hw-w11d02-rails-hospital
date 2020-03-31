@@ -11,6 +11,15 @@ class PatientsController < ApplicationController
   end
 
   def update
+    @patient = Patient.find(params[:id])
+
+    @patient.update(patient_params)
+
+    redirect_to @patient
+  end
+
+  def edit
+    @patient = Patient.find(params[:id])
   end
 
   def new
