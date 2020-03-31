@@ -1,0 +1,23 @@
+<%= form_with model: @todo ,local:true do |form| %>
+    <p>
+    First Name :
+    <%= form.text_field :first_name %>
+    </p>
+    <p>
+    Last Name: 
+    <%= form.text_field :last_name %>
+    </p>
+
+    Diagnosis:
+    <%= form.text_field :diagnosis %>
+    </p>
+
+    born_on:
+    <%= form.text_field :born_on %>
+    </p>
+
+    <%= form.submit %>
+        <% end %>
+
+
+        
