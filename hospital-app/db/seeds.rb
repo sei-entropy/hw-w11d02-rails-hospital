@@ -5,6 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
- Patient.create(first_name: "Renad", last_name: "Alobaid", diagnosis: "sick", born_on: "31/3/2020")
- Patient.create(first_name: "Afnan", last_name: "Mt", diagnosis: "sick", born_on: "31/3/2019")
- Patient.create(first_name: "Reem", last_name: "Ab", diagnosis: "flu", born_on: "31/3/2066")
+#  Patient.create(first_name: "Renad", last_name: "Alobaid", diagnosis: "sick", born_on: "31/3/2020")
+#  Patient.create(first_name: "Afnan", last_name: "Mt", diagnosis: "sick", born_on: "31/3/2019")
+#  Patient.create(first_name: "Reem", last_name: "Ab", diagnosis: "flu", born_on: "31/3/2066")
