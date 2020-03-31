@@ -1,0 +1,12 @@
+<h1>Patients List</h1>
+
+<% @patients.each do |patient| %>
+<div>
+<%=link_to patient.first_name, patient%> 
+<%= link_to patient.last_name,patient %> 
+<div>
+    <%= link_to "Delete", patient, :method => :delete %>
+</div>
+</div>
+<% end %>
+
