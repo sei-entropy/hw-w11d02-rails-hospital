@@ -5,6 +5,7 @@
 <%= patient.diagnosis%>
 
 <%= link_to "edit", edit_patient_path(patient) %>
+<%= link_to "delete", patient, method: :delete, data:{confirm:"Are you sure"} %>
 
 </div>
 <% end %>
