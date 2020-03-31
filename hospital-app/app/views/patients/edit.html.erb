@@ -1,0 +1,33 @@
+<h1>Edit the existing Patient</h1>
+
+<% if @patient.errors.any? %>
+<h2>The following errors are informing you that if you don't do these then 
+your patient will not be edited</h2>
+  <ul>
+    <% @patient.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @patient do |f| %>
+  <p>
+    <%= f.label :first_name%>
+    <%= f.text_field:first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %>
+    <%= f.text_field:last_name%>
+  </p>
+  <p>
+    <%= f.label :diagnosis %>
+    <%= f.text_field:diagnosis %>
+  </p>
+  <p>
+    <%= f.label :born_on%>
+    <%= f.date_field:born_on%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
