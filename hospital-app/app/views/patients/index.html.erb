@@ -19,6 +19,9 @@
                 edit
             </a>
         </td>
+        <td><a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= patient.first_name %>?" data-method="delete" href="/patients/<%= patient.id %>" rel="nofollow"><i class="large material-icons">Delete Patient</i>
+            </a>
+        </td>
 
     </tr>
     <%end%>

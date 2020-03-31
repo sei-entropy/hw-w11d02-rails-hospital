@@ -32,6 +32,13 @@ class PatientsController < ApplicationController
           
         redirect_to patient
     end
+
+    def destroy
+        patient = Patient.find(params[:id])
+        patient.destroy
+      
+        redirect_to patient
+      end
     
     private
       def patient_params
