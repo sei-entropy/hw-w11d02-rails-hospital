@@ -1,7 +1,7 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 
-# Hospital App
+# Hospital App 
 
 Your homework for today is to practice! You're gonna create an app with one model `Patient`.
 
@@ -23,6 +23,7 @@ Your homework for today is to practice! You're gonna create an app with one mode
   - As a user, I want to edit a patient's first name, last name, diagnosis and
     born on
   - As a user, I want to delete a patient
+- 
 
 ### Entity Relationship Diagrams
 
