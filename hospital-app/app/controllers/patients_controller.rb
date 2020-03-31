@@ -7,13 +7,7 @@ class PatientsController < ApplicationController
     @patient = Patient.find(params[:id])
   end
 
-  def update
-   
-    @patient.update(patient_params)
 
-    redirect_to @patient
-    
-  end
 
   def new
     @patient = Patient.new
@@ -26,11 +20,16 @@ class PatientsController < ApplicationController
     redirect_to @patient
   end
 
+  def edit
+    @patient = Patient.find(params[:id])
+    
+  end
+
   def destroy
     @patient = Patient.find(params[:id])
     @patient.destroy
 
-    redirect_to patient_path
+    redirect_to  patients_index_path
   end
 
   private

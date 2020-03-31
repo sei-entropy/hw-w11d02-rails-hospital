@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'patients/:id', to: 'patients#show', as: 'patient'
   post 'patients', to: 'patients#create'
 
-  patch 'patients/update/:id', to: 'patients#update', as: 'edit_patient'
+  get 'patients/:id/edit', to: 'patients#edit', as: 'edit_patient'
   delete 'patients/:id', to: 'patients#destroy', as: 'patient_destroy'
 
  
