@@ -1,0 +1,16 @@
+ <h2>Patient# <%= @patient.id%></h2> 
+  <table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Diagnosis</th>
+        <th>Date of birth</th>
+    </tr>
+
+    <tr>
+        <td><%= @patient.first_name%></td>
+        <td><%= @patient.last_name%></td>
+        <td><%= @patient.diagnosis%></td>
+        <td><%= @patient.born_on%></td>
+    </tr>
+</table>

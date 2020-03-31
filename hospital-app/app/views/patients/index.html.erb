@@ -1,0 +1,22 @@
+<h2>All Patients</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Patient name</th>
+  </tr>
+
+  <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.id%></td>
+        <td><%= patient.first_name%> <%= patient.last_name%></td>
+        <td><em><%= link_to "Show", patient_path(patient)%></em>
+        <td><a href="<%= edit_patient_path(patient) %>" >
+           <em >Edit</em>
+          </a>
+        </td>
+        <td><a data-confirm="Are you sure you want to delete <%= patient.first_name %> <%=patient.last_name %>?" data-method="delete" href="/patients/<%= patient.id %>" rel="nofollow"><i class="large material-icons">Delete</i>
+    	   </a>
+        </td>
+      </tr>
+  <% end %>
+</table>
