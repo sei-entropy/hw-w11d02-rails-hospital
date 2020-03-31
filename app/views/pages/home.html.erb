@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>SEI Hospital</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+    <nav>
+    <%= link_to 'Home' , root_path %>
+    <%= link_to 'patient List' , patients_path %>
+    </nav>
+    <body>
+    <h1>welcom to  <%= @welcom %> </h1> 
+    <%= yield %>
+    </body>
+</html>
