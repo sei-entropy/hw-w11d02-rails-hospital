@@ -21,3 +21,30 @@ def new
     def patient_params
         params.require(:patient).permit(:first_name, :last_name,  :diagnosis, :born_on)
     end
+
+
+    def edit
+        @patient = Patient.find(params[:id])
+      end
+      def update
+        patient = Patient.find(params[:id])
+        patient.update(params.require(:patient).permit(:name, :albums, :hometown, :img))
+          
+        redirect_to patient
+      end
+    
+      def destroy
+        Patient.find(params[:id]).destroy
+      
+        redirect_to patients_path
+      end
+    
+
+
+
+
+
+
+
+
+
