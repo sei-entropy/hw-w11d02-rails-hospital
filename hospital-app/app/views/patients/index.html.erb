@@ -1,13 +1,25 @@
 <h1>All The Patients</h1>
 
 <table border="1">
+
     <tr>
-        <th> Nmaes </th>
+        <th>Name</th>
+
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
+
+
 
     <% @patients.each do |patient| %>
     <tr>
-        <th><%= link_to patient.first_name, patient %> </th>
+        <td><%= link_to patient.first_name, patient_path(patient) %></td>
+
+        <td><a class="btn-floating btn-large red" href="<%= edit_patient_path(patient) %>">
+                edit
+            </a>
+        </td>
+
     </tr>
     <%end%>
 

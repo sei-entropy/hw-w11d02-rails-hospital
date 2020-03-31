@@ -21,10 +21,21 @@ class PatientsController < ApplicationController
             render 'new'
           end
       end
+
+      def edit
+        @patient = Patient.find(params[:id])
+    end
+
+    def update
+        patient = Patient.find(params[:id])
+        patient.update(params.require(:patient).permit(:first_name, :last_name, :diagnosis, :born_on))
+          
+        redirect_to patient
+    end
     
     private
       def patient_params
-        params.require(:patient).permit(:first_name, :last_name, :diagnosis , :born_on)
+        params.require(:patient).permit(:first_name, :last_name, :diagnosis, :born_on)
       end
 end
 
