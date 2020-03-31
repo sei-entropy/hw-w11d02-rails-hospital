@@ -25,13 +25,15 @@ class PatientsController < ApplicationController
     end 
 
     def update
-    @patient = Patient.update(patient_params)
+    @patient = Patient.find(params[:id])
+    @patient.update(patient_params)
     redirect_to @patient
+
     end
 
     def destroy
-    @patient = Patient.find(params[:id])
-    @patient.destroy 
+     Patient.find(params[:id]).destroy
+    redirect_to  patients_path	
     end
 
 

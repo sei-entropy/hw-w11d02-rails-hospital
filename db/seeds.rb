@@ -11,3 +11,7 @@ Patient.create(first_name: "sara", last_name: "AL OOO", diagnosis: "cold", born_
 Patient.create(first_name: "Joel", last_name: "AL OOO", diagnosis: "headache", born_on: '2016-03-02 12:05:00' )
 Patient.create(first_name: "Aziz", last_name: "AL OOO", diagnosis: "headache", born_on: '2016-03-02 12:05:00' )
 Patient.create(first_name: "noura",last_name: "AL OOO", diagnosis: "fever", born_on: '2016-03-02 12:05:00' )
+
+Doctor.create(name: "Ahmed", family_name: "ALMutairi", specialty: "Internal", zip_code: 14 )
+Doctor.create(name: "Zaki", family_name: "ALBuayjan", specialty: "Pediatrics", zip_code: 15 )
+Doctor.create(name: "Khalid", family_name: "ALBuayjan", specialty: "dentistry", zip_code: 16 )
