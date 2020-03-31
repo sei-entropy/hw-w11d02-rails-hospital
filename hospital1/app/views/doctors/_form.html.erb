@@ -1,0 +1,9 @@
+<%= form_with model: @doctor,local: true do |form| %>
+First name:<%= form.text_field :first_name %>
+Last name:<%= form.text_field :last_name %>
+<br>
+zip code:<%= form.text_field :zip_code %>
+specialty:<%= form.text_field :specialty %>
+<br>
+<%= form.submit%>
+<% end %>

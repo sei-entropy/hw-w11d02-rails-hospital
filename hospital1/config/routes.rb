@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'patients', to: 'patients#create'
   # get 'patients/index'
   resources :patients
+  resources :doctors
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'patients#index'
 end
