@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
  
-  #get 'patients/new' , to:'patients#new'
 
   #get 'todos/:id' , to: 'todos#show'  
   
   get 'patients/:id', to: 'patients#show', as: 'patient'
   get 'patients', to: 'patients#index'
   
-  #post 'patients', to: 'patients#create'
+  get 'patients/new' , to:'patients#new'
+  post 'patients', to: 'patients#create'
   
   #get 'pages/home'
   #get 'pages/about'
