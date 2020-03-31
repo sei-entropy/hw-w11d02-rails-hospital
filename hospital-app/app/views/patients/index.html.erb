@@ -7,7 +7,7 @@
 
     <% @patients.each do |patient| %>
     <tr>
-        <th><%= link_to patient.diagnosis, patient %> </th>
+        <th><%= link_to patient.first_name, patient %> </th>
     </tr>
     <%end%>
 
