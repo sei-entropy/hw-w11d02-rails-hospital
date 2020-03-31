@@ -1,0 +1,15 @@
+<h1>All The Patients</h1>
+
+<table border="1">
+    <tr>
+        <th> Nmaes </th>
+    </tr>
+
+    <% @patients.each do |patient| %>
+    <tr>
+        <th><%= link_to patient.diagnosis, patient %> </th>
+    </tr>
+    <%end%>
+
+
+</table>
