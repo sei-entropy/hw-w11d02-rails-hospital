@@ -1,4 +1,3 @@
 <h2>Patient Edit </h2>
-<%= render 'form' %>
- 
-<%= link_to 'Back', patient_path %>
+<%= render partial: 'form', locals: {Patient:@patient} %>
+<%= link_to 'Back', patients_path %>

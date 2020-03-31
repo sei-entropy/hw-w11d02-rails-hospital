@@ -7,11 +7,7 @@
 <%= one_patient.diagnosis %>
 <%= one_patient.born_on %>
 <%= link_to 'Show', patient_path(one_patient) %>
-<%
-=begin%>
- <%= link_to 'Edit', edit_patient_path(one_patient) %> 
-<%
-=end%>
+<%= link_to 'Edit', edit_patient_path(one_patient) %>
 <%= link_to 'Destroy', delete_patient_path(one_patient),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>

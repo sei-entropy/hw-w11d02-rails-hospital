@@ -8,14 +8,20 @@ class PatientsController < ApplicationController
     def new
         @patient = Patient.new
     end
+    def edit
+    @patient = Patient.find(params[:id])
+  end
+  def update
+  @patient = Patient.find(params[:id])
+  @patient.update(patient_params)
+	redirect_to @patient
+end
     def create 
         @patient = Patient.new(patient_params)
         @patient.save
         redirect_to @patient
     end
-    def edit
-    @patient = Patient.find(params[:id])
-  end
+ 
     def destroy
   @patient = Patient.find(params[:id])
   @patient.destroy
