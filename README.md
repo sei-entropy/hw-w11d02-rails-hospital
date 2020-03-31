@@ -14,7 +14,7 @@ Your homework for today is to practice! You're gonna create an app with one mode
 - Complete all the user stories mentioned below.
 
 ### User Stories
-
+rails g model Patient first_name last_name diagnosis born_on
 - Version 1
   - As a user, I want to view a single patient
   - As a user, I want to view all patients

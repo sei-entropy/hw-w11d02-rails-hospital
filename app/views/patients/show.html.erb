@@ -1,0 +1,19 @@
+<h2>Show <h2>
+<div>
+First_name : <%= @patient.first_name%>
+</div>
+<div>
+Last_name : <%= @patient.last_name%>
+</div>
+<div>
+Diagnosis : <%= @patient.diagnosis%>
+</div>
+<div>
+Born_on : <%= @patient.born_on%>
+</div>
+<div>
+<%=  link_to  "Delete"  , patient_delete_url %>
+</div>
+<div>
+<%=  link_to  "Edit"  , patient_edit_url %>
+</div>
