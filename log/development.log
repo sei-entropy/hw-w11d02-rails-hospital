@@ -1,0 +1,2026 @@
+  [1m[35m (338.6ms)[0m  [1m[35mCREATE DATABASE "Hospital_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (128.6ms)[0m  [1m[35mCREATE DATABASE "Hospital_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (50.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (25.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6631893742886176065)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (6.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (3.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-30 16:55:42.915451"], ["updated_at", "2020-03-30 16:55:42.915451"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6631893742886176065)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-03-30 19:56:49 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 28ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6631893742886176065)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePatients (20200330173420)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (12.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6631893742886176065)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6631893742886176065)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePatients (20200330173420)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (57.3ms)[0m  [1m[35mCREATE TABLE "patients" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "diagnosis" character varying, "born_on" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200330173420_create_patients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200330173420"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (17.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6631893742886176065)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-03-30 20:58:32 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Bedours-MacBook-Air/.gem/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (10.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPatient Create (11.3ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Smith"], ["diagnosis", "Hyper attention"], ["born_on", 1981], ["created_at", "2020-03-30 18:33:25.480281"], ["updated_at", "2020-03-30 18:33:25.480281"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPatient Create (14.1ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Smith"], ["diagnosis", "Hyper attention"], ["born_on", 1981], ["created_at", "2020-03-30 18:43:05.822941"], ["updated_at", "2020-03-30 18:43:05.822941"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPatient Create (6.8ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Smith"], ["diagnosis", "Hyper attention"], ["born_on", 24], ["created_at", "2020-03-30 18:50:46.723922"], ["updated_at", "2020-03-30 18:50:46.723922"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPatient Create (8.0ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Smith"], ["diagnosis", "Hyper attention"], ["born_on", 0], ["created_at", "2020-03-30 18:55:55.982212"], ["updated_at", "2020-03-30 18:55:55.982212"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mPatient Create (14.0ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Adam"], ["last_name", "Smith"], ["diagnosis", "Hyper attention"], ["born_on", "1999-09-09"], ["created_at", "2020-03-30 18:59:49.821704"], ["updated_at", "2020-03-30 18:59:49.821704"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ali"], ["last_name", "Khaled"], ["diagnosis", "Heart Failure"], ["born_on", "1989-12-08"], ["created_at", "2020-03-30 18:59:49.840536"], ["updated_at", "2020-03-30 18:59:49.840536"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Sarah"], ["last_name", "Omar"], ["diagnosis", "Headache"], ["born_on", "1970-05-22"], ["created_at", "2020-03-30 18:59:49.842698"], ["updated_at", "2020-03-30 18:59:49.842698"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mPatient Create (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Aisha"], ["last_name", "Nasser"], ["diagnosis", "Stomache pain"], ["born_on", "2000-11-12"], ["created_at", "2020-03-30 18:59:49.844736"], ["updated_at", "2020-03-30 18:59:49.844736"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPatient Create (0.6ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Fahad"], ["last_name", "Alahmed"], ["diagnosis", "Fever"], ["born_on", "1988-06-02"], ["created_at", "2020-03-30 18:59:49.846991"], ["updated_at", "2020-03-30 18:59:49.846991"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+Started GET "/" for ::1 at 2020-03-30 22:23:54 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (34.7ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2020-03-30 22:24:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/home" for ::1 at 2020-03-30 22:25:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pages/home" for ::1 at 2020-03-30 22:25:39 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1063ms (Views: 1060.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:25:54 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 146ms (Views: 143.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:25:57 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:25:58 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-03-30 22:26:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pages/patients" for ::1 at 2020-03-30 22:26:55 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:28:09 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 22:28:16 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:28:54 +0300
+  
+SyntaxError (/Users/bedourfsh/sei/homeworks/hw-w11d02-rails-hospital/Hospital/config/routes.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  get 'contact', to 'pages#contact'
+                    ^):
+  
+config/routes.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+Started GET "/" for ::1 at 2020-03-30 22:29:14 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2020-03-30 22:29:20 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 83ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2020-03-30 22:36:52 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 90ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 22:36:55 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:36:56 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 53ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2020-03-30 22:36:57 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2020-03-30 22:38:56 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 76ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:38:58 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 22:39:37 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:39:39 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2020-03-30 22:39:43 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 143ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 22:39:45 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 22:39:46 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 22:40:31 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 22:40:40 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 22:52:53 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/patients" for ::1 at 2020-03-30 22:52:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients" for ::1 at 2020-03-30 22:53:25 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/patients" for ::1 at 2020-03-30 22:56:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-30 22:57:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-30 22:58:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-30 23:09:30 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Bedours-MacBook-Air/.gem/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 609ms (Views: 595.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:09:59 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 78ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:10:58 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients/2" for ::1 at 2020-03-30 23:12:01 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (5.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 212ms (Views: 39.6ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/patients/2" for ::1 at 2020-03-30 23:34:00 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (18.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (41.4ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 19.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <%= @patient.first_name @patient.last_name %>
+  
+app/views/patients/show.html.erb:1:in `_app_views_patients_show_html_erb__905395909868592252_70205748917300'
+Started GET "/patients" for ::1 at 2020-03-30 23:34:31 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 119ms (Views: 115.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-30 23:34:37 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <%= @patient.first_name @patient.last_name %>
+  
+app/views/patients/show.html.erb:1:in `_app_views_patients_show_html_erb__905395909868592252_70205739930620'
+Started GET "/patients/1" for ::1 at 2020-03-30 23:35:01 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <%= @patient.first_name @patient.last_name%>
+  
+app/views/patients/show.html.erb:1:in `_app_views_patients_show_html_erb__905395909868592252_70205768544940'
+Started GET "/patients/1" for ::1 at 2020-03-30 23:35:46 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 23:36:29 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 97ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 23:36:30 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:36:32 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2020-03-30 23:36:35 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:36:36 +0300
+Processing by PagesController#patients as HTML
+  Rendering pages/patients.html.erb within layouts/application
+  Rendered pages/patients.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients/3" for ::1 at 2020-03-30 23:36:40 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:38:33 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  Rendered patients/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 49ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:38:36 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  Rendered patients/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:49:18 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (1.0ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 121ms (Views: 78.5ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:49:47 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:50:12 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:51:07 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:51:11 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 23:51:13 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 106ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:51:14 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (5.7ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 55ms (Views: 47.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:55:18 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (1.1ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (268.2ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `linke_to' for #<#<Class:0x00007fb41b9a9530>:0x00007fb41b9c2148>
+Did you mean?  link_to):
+    2: 
+    3: <% @patients.each do |patient| %>
+    4: <div>
+    5: <%=linke_to patient.first_name, patient%> 
+    6: <%= linke_to patient.last_name,patient %> 
+    7: 
+    8: </div>
+  
+app/views/patients/index.html.erb:5:in `block in _app_views_patients_index_html_erb__1715350228521467207_70205767031800'
+app/views/patients/index.html.erb:3:in `_app_views_patients_index_html_erb__1715350228521467207_70205767031800'
+Started GET "/patients" for ::1 at 2020-03-30 23:55:57 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/4" for ::1 at 2020-03-30 23:56:00 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 76ms (Views: 24.6ms | ActiveRecord: 35.4ms)
+
+
+Started GET "/patients/5" for ::1 at 2020-03-30 23:56:09 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (8.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 41.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-30 23:57:35 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (1.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 102ms (Views: 82.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-30 23:58:01 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-30 23:58:10 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 48.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-30 23:59:09 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-30 23:59:11 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 123ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:59:12 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (14.0ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 56ms (Views: 40.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-30 23:59:18 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-30 23:59:26 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:20:07 +0300
+  
+ArgumentError (Invalid route name, already in use: 'patient' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/patients" for ::1 at 2020-03-31 00:21:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients" for ::1 at 2020-03-31 00:22:47 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (9.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 104ms (Views: 74.2ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-31 00:22:49 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:22:50 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 111ms (Views: 107.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contact" for ::1 at 2020-03-31 00:22:51 +0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:22:53 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 00:22:55 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 45.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-31 00:22:58 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:22:59 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (1.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/patients/ew" for ::1 at 2020-03-31 00:23:17 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"ew"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=ew):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients/new" for ::1 at 2020-03-31 00:23:22 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=new):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients" for ::1 at 2020-03-31 00:23:29 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:23:43 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 51ms (Views: 38.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/patients/new" for ::1 at 2020-03-31 00:23:51 +0300
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered patients/_form.html.erb (37.1ms)
+  Rendered patients/new.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients/new" for ::1 at 2020-03-31 00:28:49 +0300
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered patients/_form.html.erb (44.8ms)
+  Rendered patients/new.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 134ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients/new" for ::1 at 2020-03-31 00:30:08 +0300
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered patients/_form.html.erb (262.2ms)
+  Rendered patients/new.html.erb within layouts/application (263.8ms)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `rich_text_area' for #<ActionView::Helpers::FormBuilder:0x00007fb41bbbc430>):
+     9: </p>
+    10: <p>
+    11: Diagnosis
+    12: <%= form.rich_text_area :diagnosis %>
+    13: </p>
+    14: <p>
+    15: Born on:
+  
+app/views/patients/_form.html.erb:12:in `block in _app_views_patients__form_html_erb__3183413122776015350_70205768072980'
+app/views/patients/_form.html.erb:1:in `_app_views_patients__form_html_erb__3183413122776015350_70205768072980'
+app/views/patients/new.html.erb:1:in `_app_views_patients_new_html_erb__1144631398185759638_70205779467680'
+Started GET "/patients/new" for ::1 at 2020-03-31 00:32:04 +0300
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered patients/_form.html.erb (337.1ms)
+  Rendered patients/new.html.erb within layouts/application (342.8ms)
+Completed 500 Internal Server Error in 365ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_area_tag' for #<ActionView::Helpers::FormBuilder:0x00007fb4197dd258>
+Did you mean?  text_area):
+     9: </p>
+    10: <p>
+    11: Diagnosis
+    12: <%= form.text_area_tag  :diagnosis %>
+    13: </p>
+    14: <p>
+    15: Born on:
+  
+app/views/patients/_form.html.erb:12:in `block in _app_views_patients__form_html_erb__3183413122776015350_70205749240640'
+app/views/patients/_form.html.erb:1:in `_app_views_patients__form_html_erb__3183413122776015350_70205749240640'
+app/views/patients/new.html.erb:1:in `_app_views_patients_new_html_erb__1144631398185759638_70205767063860'
+Started GET "/patients/new" for ::1 at 2020-03-31 00:32:14 +0300
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered patients/_form.html.erb (33.0ms)
+  Rendered patients/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/patients" for ::1 at 2020-03-31 00:33:10 +0300
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SwlRgfMeWlHrTTFcUpMI/h8S6bjjpm6J8QyoUsRnsO+Dog26V/99LiZd6e0aZUvy72ff3P1+kQJCHJrVWr5jcA==", "patient"=>{"first_name"=>"Somayah", "last_name"=>"Babder", "diagnosis"=>"flue", "born_on"=>"1988-07-14"}, "commit"=>"Create Patient"}
+  [1m[35m (6.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/patients_controller.rb:15
+  [1m[36mPatient Create (29.9ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Somayah"], ["last_name", "Babder"], ["diagnosis", "flue"], ["born_on", "1988-07-14"], ["created_at", "2020-03-30 21:33:10.408143"], ["updated_at", "2020-03-30 21:33:10.408143"]]
+  ↳ app/controllers/patients_controller.rb:15
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/patients_controller.rb:15
+Redirected to http://localhost:3000/patients/6
+Completed 302 Found in 45ms (ActiveRecord: 38.4ms)
+
+
+Started GET "/patients/6" for ::1 at 2020-03-31 00:33:10 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 43.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:33:13 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 00:35:31 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:35:33 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/6" for ::1 at 2020-03-31 00:35:58 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPatient Load (1.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:41:07 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (1.2ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 104ms (Views: 87.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/patients/new" for ::1 at 2020-03-31 00:42:09 +0300
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered patients/_form.html.erb (6.7ms)
+  Rendered patients/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/patients" for ::1 at 2020-03-31 00:42:44 +0300
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ad8kZJkdWpsTR6vqHDCFlmFC4vyaSPO7nToQmIJTF2rJdHhfPfx95N5Xc1tUxsaakTfUmISQDDAuKiIfHIrE9Q==", "patient"=>{"first_name"=>"lolo", "last_name"=>"koko", "diagnosis"=>"fever", "born_on"=>"2020-03-01"}, "commit"=>"Create Patient"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/patients_controller.rb:15
+  [1m[36mPatient Create (1.0ms)[0m  [1m[32mINSERT INTO "patients" ("first_name", "last_name", "diagnosis", "born_on", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "lolo"], ["last_name", "koko"], ["diagnosis", "fever"], ["born_on", "2020-03-01"], ["created_at", "2020-03-30 21:42:44.404620"], ["updated_at", "2020-03-30 21:42:44.404620"]]
+  ↳ app/controllers/patients_controller.rb:15
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/patients_controller.rb:15
+Redirected to http://localhost:3000/patients/7
+Completed 302 Found in 18ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/patients/7" for ::1 at 2020-03-31 00:42:44 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:42:49 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (2.8ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 80ms (Views: 74.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 00:43:29 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (11.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 128ms (Views: 113.5ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:43:40 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (1.9ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 00:44:21 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (361.8ms)
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `button' for #<#<Class:0x00007fb41962c9b8>:0x00007fb4197d6b10>
+Did you mean?  button_to):
+     7: 
+     8: </div>
+     9: <% end %>
+    10: <%= button %>
+  
+app/views/patients/index.html.erb:10:in `_app_views_patients_index_html_erb__1715350228521467207_70205749246840'
+Started GET "/patients" for ::1 at 2020-03-31 00:44:30 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 00:47:00 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 126ms (Views: 120.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 00:50:13 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 104ms (Views: 62.5ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/patients/delete" for ::1 at 2020-03-31 00:50:20 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=delete):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients/delete" for ::1 at 2020-03-31 00:53:07 +0300
+  
+SyntaxError (/Users/bedourfsh/sei/homeworks/hw-w11d02-rails-hospital/Hospital/config/routes.rb:7: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+...s', to: 'patients#delete', as 'patient'
+...                              ^):
+  
+config/routes.rb:7: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+Started GET "/patients/delete" for ::1 at 2020-03-31 00:54:28 +0300
+  
+ArgumentError (Invalid route name, already in use: 'patient' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/patients/delete" for ::1 at 2020-03-31 00:56:57 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 31ms (ActiveRecord: 18.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=delete):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients/delete" for ::1 at 2020-03-31 00:57:16 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 10ms (ActiveRecord: 4.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=delete):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients" for ::1 at 2020-03-31 00:57:19 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 92ms (Views: 76.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients/destroy" for ::1 at 2020-03-31 01:13:46 +0300
+  
+SyntaxError (/Users/bedourfsh/sei/homeworks/hw-w11d02-rails-hospital/Hospital/config/routes.rb:7: syntax error, unexpected tIDENTIFIER, expecting end
+...:id', to: 'patients#destroy' as 'delete'
+...                             ^~
+/Users/bedourfsh/sei/homeworks/hw-w11d02-rails-hospital/Hospital/config/routes.rb:11: syntax error, unexpected end, expecting end-of-input):
+  
+config/routes.rb:7: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:11: syntax error, unexpected end, expecting end-of-input
+Started GET "/patients/destroy" for ::1 at 2020-03-31 01:14:28 +0300
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Bedours-MacBook-Air/.gem/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"destroy"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 24ms (ActiveRecord: 6.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=destroy):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients/destroy/2" for ::1 at 2020-03-31 01:14:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients/destroy/2"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients" for ::1 at 2020-03-31 08:00:57 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Bedours-MacBook-Air/.gem/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  
+SyntaxError (/Users/bedourfsh/sei/homeworks/hw-w11d02-rails-hospital/Hospital/app/controllers/patients_controller.rb:23: syntax error, unexpected end-of-input):
+  
+app/controllers/patients_controller.rb:23: syntax error, unexpected end-of-input
+Started GET "/patients" for ::1 at 2020-03-31 08:01:00 +0300
+  
+SyntaxError (/Users/bedourfsh/sei/homeworks/hw-w11d02-rails-hospital/Hospital/app/controllers/patients_controller.rb:23: syntax error, unexpected end-of-input):
+  
+app/controllers/patients_controller.rb:23: syntax error, unexpected end-of-input
+Started GET "/patients" for ::1 at 2020-03-31 08:01:21 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (18.7ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 405ms (Views: 366.1ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 08:01:23 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (58.9ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 153ms (Views: 60.7ms | ActiveRecord: 59.2ms)
+
+
+Started GET "/patients//edit/1" for ::1 at 2020-03-31 08:01:32 +0300
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for PatientsController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients//edit/1" for ::1 at 2020-03-31 08:03:43 +0300
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:27
+Completed 406 Not Acceptable in 95ms (ActiveRecord: 9.6ms)
+
+
+  
+ActionController::UnknownFormat (PatientsController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients//edit/1" for ::1 at 2020-03-31 08:04:58 +0300
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:27
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 130ms (Views: 125.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients//edit/1" for ::1 at 2020-03-31 08:05:08 +0300
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:27
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients//edit/1" for ::1 at 2020-03-31 08:06:00 +0300
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:27
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients//edit/1" for ::1 at 2020-03-31 08:06:15 +0300
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:27
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/_form.html.erb (62.1ms)
+  Rendered patients/edit.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 110ms (Views: 105.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:06:18 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (4.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 51ms (Views: 42.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/patients/7" for ::1 at 2020-03-31 08:06:20 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients/edit/2" for ::1 at 2020-03-31 08:06:28 +0300
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:27
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/_form.html.erb (98.4ms)
+  Rendered patients/edit.html.erb within layouts/application (101.1ms)
+Completed 200 OK in 143ms (Views: 139.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients/edit/7" for ::1 at 2020-03-31 08:07:01 +0300
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:27
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered patients/_form.html.erb (3.2ms)
+  Rendered patients/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/patients/7" for ::1 at 2020-03-31 08:07:06 +0300
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCwNHwV/LL8jonzi31nit13/V/67KwbZZ6QUAhiUWqvgh1EkoZ4LwO6ypFOXr6G7rYphmqXz+VLUtCaFhk2JNA==", "patient"=>{"first_name"=>"lolo2", "last_name"=>"koko", "diagnosis"=>"fever", "born_on"=>"2020-03-01"}, "commit"=>"Update Patient", "id"=>"7"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:19
+  [1m[35m (7.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/patients_controller.rb:21
+  [1m[36mPatient Update (14.5ms)[0m  [1m[33mUPDATE "patients" SET "first_name" = $1, "updated_at" = $2 WHERE "patients"."id" = $3[0m  [["first_name", "lolo2"], ["updated_at", "2020-03-31 05:07:06.789839"], ["id", 7]]
+  ↳ app/controllers/patients_controller.rb:21
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/patients_controller.rb:21
+Redirected to http://localhost:3000/patients/7
+Completed 302 Found in 42ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/patients/7" for ::1 at 2020-03-31 08:07:06 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:07:09 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/destroy" for ::1 at 2020-03-31 08:13:17 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"destroy"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 26ms (ActiveRecord: 10.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=destroy):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients/destroy" for ::1 at 2020-03-31 08:14:00 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"destroy"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+Completed 404 Not Found in 13ms (ActiveRecord: 6.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=destroy):
+  
+app/controllers/patients_controller.rb:3:in `show'
+Started GET "/patients/destroy" for ::1 at 2020-03-31 08:16:33 +0300
+Processing by PatientsController#destroy as HTML
+Completed 406 Not Acceptable in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (PatientsController#destroy is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients/destroy" for ::1 at 2020-03-31 08:18:25 +0300
+Processing by PatientsController#destroy as HTML
+Completed 404 Not Found in 25ms (ActiveRecord: 8.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient without an ID):
+  
+app/controllers/patients_controller.rb:19:in `destroy'
+Started GET "/patients/destroy" for ::1 at 2020-03-31 08:23:17 +0300
+Processing by PatientsController#destroy as HTML
+Completed 404 Not Found in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient without an ID):
+  
+app/controllers/patients_controller.rb:19:in `destroy'
+Started GET "/patients/destroy/7" for ::1 at 2020-03-31 08:23:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients/destroy/7"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients/destroy" for ::1 at 2020-03-31 08:24:33 +0300
+Processing by PatientsController#destroy as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient without an ID):
+  
+app/controllers/patients_controller.rb:19:in `destroy'
+Started GET "/patients/destroy" for ::1 at 2020-03-31 08:24:36 +0300
+Processing by PatientsController#destroy as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient without an ID):
+  
+app/controllers/patients_controller.rb:19:in `destroy'
+Started GET "/patients/7" for ::1 at 2020-03-31 08:25:04 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (1.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 69ms (Views: 50.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/patients/7/destroy" for ::1 at 2020-03-31 08:25:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients/7/destroy"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/patients/7" for ::1 at 2020-03-31 08:26:41 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (1.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 83ms (Views: 44.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:29:13 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (1.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 86ms (Views: 74.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 08:29:15 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 08:29:19 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:29:21 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (3.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:29:55 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:30:38 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:30:39 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2020-03-31 08:30:41 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (9.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (325.7ms)
+Completed 500 Internal Server Error in 344ms (ActiveRecord: 9.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `patient' for #<#<Class:0x00007fd3b53e5950>:0x00007fd3b6033400>
+Did you mean?  @patient):
+     7: <%= @patient.diagnosis %>
+     8: </div>
+     9: <div>
+    10:     <%= link_to "Delete", patient, :method => :delete %>
+    11: </div>
+  
+app/views/patients/show.html.erb:10:in `_app_views_patients_show_html_erb__1099085556912209439_70273634246220'
+Started GET "/patients/1" for ::1 at 2020-03-31 08:31:34 +0300
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:3
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 90ms (Views: 67.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:31:36 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (2.0ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 59ms (Views: 52.9ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/patients/7" for ::1 at 2020-03-31 08:31:39 +0300
+Processing by PatientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sGc98sQHHcECOczXwZ9OAy4vYwghr8BcJAIfCQdY0+x4zGHJYOY6vs8pFGaJaQ0P3lpVbD93P9eXEi2OmYEAcw==", "id"=>"7"}
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:19
+  [1m[36mPatient Destroy (18.8ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/patients_controller.rb:19
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-31 08:31:39 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-03-31 08:31:41 +0300
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:3
+  Rendered patients/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 123ms (Views: 106.3ms | ActiveRecord: 0.7ms)
+
+
