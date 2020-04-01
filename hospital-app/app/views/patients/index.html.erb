@@ -1,16 +1,15 @@
 <h1>All the Patients</h1>
-# <%= link_to "New Patient", new_patient_path, { :class => "button waves-effect waves-light btn" } %>
-<%= link_to "Add New Patient",  patients_new_path %>
-<table> 
-<% @patients.each do |patients| %>
-    <tr>
-    <td>First_Name:<%= link_to patient.first_name, patient %></td>
-    <td>Last_Name:<%= @patient.last_name %></td>
-    <td>Diagnosis:<%= @patient.diagnosis %></td>
-    <td>Born_On:<%= @patient.born_on %></td>
-    </tr>
-<% end %>
-<%= link_to "Edit", edit_path(patient.id) %>
-<%= link_to "Delete", patient, :method => :delete %>
-</table> 
 
+<table>
+    <tr>First Name</tr>
+    <% @patients.each do |patient| %>
+    <tr>
+    <td><%= link_to patient.first_name, patient_path(patient) %></td>
+    </tr>
+
+    <td> <%= link_to 'Edit', edit_patient_path(patient) %> </td>
+    <td>   <%= link_to "Delete", patient, :method => :delete %></td>
+    <%end%>
+
+
+</table>

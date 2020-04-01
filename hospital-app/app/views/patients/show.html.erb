@@ -1,13 +1,16 @@
-<h1>One Patient</h1>
-<table> 
 
-<% @patients.each do |patients| %>
-    <tr>
-    <td>First Name<%= @patient.first_name %></td>
-    <td>Last Name<%= @patient.last_name %></td>
-    <td>Diagnosis<%= @patient.diagnosis %></td>
-    <td>Born On<%= @patient.born_on %></td>
-    </tr>
-<% end %>
+<h2>One Patient</h2>
+<div>
+First Name : <%= @patient.first_name  %> 
+</div>
+<div>
+Last Name : <%= @patient.last_name  %>
+</div>
+<div>
+    diagnosis : <%= @patient.diagnosis  %>
+</div>
+<div>
+    Born on : <%= @patient.born_on  %>
+</div>
 
-</table> 
+ 
