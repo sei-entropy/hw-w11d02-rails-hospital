@@ -1,0 +1,19 @@
+<h2>List of patients</h2>
+
+
+<% @patient.each do |patient| %>
+<div>First Name: <%= link_to patient.first_name, patient %>
+</div>
+<div>Last Name: <%= link_to patient.last_name, patient %>
+</div>
+<div>Diagnosis: <%= link_to patient.diagnosis, patient %>
+</div>
+<div>born_on: <%= link_to patient.born_on, patient %>
+</div>
+<%= link_to 'Edit', edit_patient_path(patient) %>
+     <%= link_to 'Destroy', patient,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+      
