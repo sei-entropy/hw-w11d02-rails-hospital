@@ -12,6 +12,11 @@
     <div>
     Born_on: <%= patient.born_on %>
     </div>
-  
+    <div>
+    <%= link_to "Edit", patient_edit_path(patient.id) %>
+    </div>
+    <div>
+    <%=link_to 'Delete' ,patient_path(patient.id) ,method: :delete, data: { confirm: 'Are you sure?' }%>
+    </div>
     <% end %>
    

@@ -8,6 +8,6 @@ Rails.application.routes.draw do
    patch "patients/:id", to: "patients#update"
    delete "patients/:id", to: "patients#destroy"
   get 'pages/home'
-  root 'pages#home'
+  root 'patients#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

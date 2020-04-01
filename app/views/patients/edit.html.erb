@@ -1,20 +1,2 @@
 <h2> Update Patient Information</h2>
-<%=form_with model:@patient, local: true do |form| %>
-    <p>
-    First_name:
-    <%=form.text_field :first_name %>
-    </p>
-    <p>
-    Last_name:
-    <%=form.text_field :last_name%>
-    </p>
-    <p>
-    Diagnosis:
-    <%=form.text_field :diagnosis%>
-    </p>
-    Born_on:
-    <%=form.text_field :born_on%>
-    </p>
-    <%= form.submit %>
-    
-    <% end %>
+<%= render partial: 'form', locals: {patient: @patient} %>
