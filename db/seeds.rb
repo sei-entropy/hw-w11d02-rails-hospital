@@ -10,3 +10,6 @@ Patient.create(first_name: "Hanan" ,last_name: "Ali" ,diagnosis: "Sick" ,born_on
 Patient.create(first_name: "Haya" ,last_name: "Abdulaziz" ,diagnosis: "Sick" ,born_on: "3-8-1996")
 Patient.create(first_name: "Abdulaziz" ,last_name: "Ali" ,diagnosis: "Sick" ,born_on: "3-8-1991")
 Patient.create(first_name: " Khaled" ,last_name: "Ali" ,diagnosis: "Sick" ,born_on: "3-7-1990")
+
+Doctor.create(doctor_name: " Khaled" ,family_name: "Ali" ,specialty: "Cosmetic doctor" ,zip_code:1234)
+Doctor.create(doctor_name: " Abdulaziz" ,family_name: "Ali" ,specialty: "Cosmetic doctor" ,zip_code:19874)

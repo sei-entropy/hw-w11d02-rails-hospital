@@ -9,5 +9,9 @@ Rails.application.routes.draw do
    delete "patients/:id", to: "patients#destroy"
   get 'pages/home'
   root 'patients#index'
+
+  resources :doctor
+  post 'doctor', to: 'doctor#create'
+  patch "doctor/:id", to: "doctor#update"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
