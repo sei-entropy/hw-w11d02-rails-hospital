@@ -11,3 +11,10 @@ Patient.create(first_name:'Hisham', last_name:'Aljahbli' ,diagnosis:"the bash", 
 Patient.create(first_name:'Saqar', last_name:'Alarifi', diagnosis:"warning rails", born_on:"1993-01-01")
 Patient.create(first_name:'Rawan', last_name:'Alrajeh', diagnosis:"Common cold", born_on:"1996-02-02")
 Patient.create(first_name:'Haya', last_name:' abdulaziz', diagnosis:"Common cold", born_on:"1996-03-03")
+
+
+Doctor.create(first_name:'Rana' ,last_name:'Almalki', zip_code:"12345", specialty:"Gastroenterologist")
+Doctor.create(first_name:'Hisham', last_name:'Aljahbli' ,zip_code:"12345", specialty:"Cardiologist")
+Doctor.create(first_name:'Saqar', last_name:'Alarifi', zip_code:"12345", specialty:"Ophthalmologis")
+Doctor.create(first_name:'Rawan', last_name:'Alrajeh', zip_code:"12345", specialty:"Endocrinologist")
+Doctor.create(first_name:'Haya', last_name:' abdulaziz', zip_code:"12345", specialty:"Dermatologists")
