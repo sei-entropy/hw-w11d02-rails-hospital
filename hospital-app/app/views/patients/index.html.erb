@@ -15,16 +15,18 @@
     <tr>
         <td><%= link_to patient.first_name, patient_path(patient) %></td>
 
-        <td><a class="btn-floating btn-large red" href="<%= edit_patient_path(patient) %>">
+        <td><a href="<%= edit_patient_path(patient) %>">
                 edit
             </a>
         </td>
-        <td><a class="btn-floating btn-large red" data-confirm="Are you sure you want to delete <%= patient.first_name %>?" data-method="delete" href="/patients/<%= patient.id %>" rel="nofollow"><i class="large material-icons">Delete Patient</i>
+        <td><a data-confirm="Are you sure you want to delete <%= patient.first_name %>?" data-method="delete" href="/patients/<%= patient.id %>" rel="nofollow">Delete
             </a>
         </td>
 
     </tr>
     <%end%>
+
+
 
 
 </table>

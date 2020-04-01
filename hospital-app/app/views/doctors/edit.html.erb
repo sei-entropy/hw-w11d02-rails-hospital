@@ -1,0 +1,5 @@
+<h1>Edit <%= @doctor.first_name %></h1>
+
+<%# <%= render 'patient/form' %> %>
+
+<%= render partial: 'form', locals: { doctor: @doctor } %>

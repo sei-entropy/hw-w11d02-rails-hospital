@@ -11,3 +11,4 @@ Patient.create(first_name: "Ali 2", last_name: "Aljamid 2", diagnosis: "Just Nee
 Patient.create(first_name: "Ali 3", last_name: "Aljamid 3", diagnosis: "Just Need to sleep!!", born_on: 1919)
 
 
+Doctor.create(first_name: "Dr 1", last_name: " Last Dr 1", zip: 0077, specialty: "Nothing")
