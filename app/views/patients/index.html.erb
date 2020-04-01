@@ -1,0 +1,22 @@
+<h2>All Patient</h2>
+<%  @patients.each do |patient| %>
+    <div>
+    First_name: <%= patient.first_name %>
+    </div>
+    <div>
+    Last_name: <%= patient.last_name %>
+    </div>
+    <div>
+    Diagnosis: <%= patient.diagnosis %>
+    </div>
+    <div>
+    Born_on: <%= patient.born_on %>
+    </div>
+    <div>
+    <%= link_to "Edit", patient_edit_path(patient.id) %>
+    </div>
+    <div>
+    <%=link_to 'Delete' ,patient_path(patient.id) ,method: :delete, data: { confirm: 'Are you sure?' }%>
+    </div>
+    <% end %>
+   
