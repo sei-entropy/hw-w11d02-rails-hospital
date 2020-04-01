@@ -6,7 +6,7 @@
     <tr>
     <td><%= link_to patient.first_name, patient_path(patient) %></td>
     </tr>
-
+    <td> <%= link_to 'Add', add_patient_path(patient) %> </td>
     <td> <%= link_to 'Edit', edit_patient_path(patient) %> </td>
     <td>   <%= link_to "Delete", patient, :method => :delete %></td>
     <%end%>

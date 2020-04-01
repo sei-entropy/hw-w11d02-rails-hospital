@@ -1,0 +1,15 @@
+<h1>All the Doctors</h1>
+
+<table>
+    <tr>First Name</tr>
+    <% @doctors.each do |doctor| %>
+    <tr>
+    <td><%= link_to doctor.first_name, doctor_path(doctor) %></td>
+    </tr>
+    <td> <%= link_to 'Add', add_doctor_path(doctor) %> </td>
+    <td> <%= link_to 'Edit', edit_doctor_path(doctor) %> </td>
+    <td>   <%= link_to "Delete", doctor, :method => :delete %></td>
+    <%end%>
+
+
+</table>
