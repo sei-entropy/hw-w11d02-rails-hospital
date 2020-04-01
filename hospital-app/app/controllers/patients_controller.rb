@@ -9,12 +9,16 @@ class PatientsController < ApplicationController
 
         def new
             @patient = Patient.new
+            @doctor = Doctor.new
         end
+    
         def create
-            @patient = Patient.new(patient_params)
             
-            if @patient.save
-            redirect_to @patient
+            @patient = Patient.create(params.require(:patient).permit(:first_name , :last_name , :diagnosis , :born_on))
+            @doctor = Doctor.create(params.require(:doctors).permit(:name ,:doctor_id))
+
+            if @patient.save && @doctor.save
+            redirect_to patients_path
             else
                 render 'new'
             end
@@ -33,7 +37,7 @@ class PatientsController < ApplicationController
         def destroy
 
             Patient.find(params[:id]).destroy
-            redirect_to patient_path
+            redirect_to patients_path 
 
         end
 

@@ -1,0 +1,16 @@
+<h2> New Doctor </h2>
+<% if @doctor.errors.any?%>
+
+<h3> You missing field! </3>
+<h4> 
+<%= pluralize(@doctor.errors.count, 'error') %> <
+stopped us from saving the task:
+</h4>
+<ul>
+  <% @doctor.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= render partial: 'form', locals: { doctor: @doctor } %>

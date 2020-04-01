@@ -1,4 +1,6 @@
 <h2>Patients <h2>
+<%= link_to 'Back', controller: 'patients' %>
+
 <form>
 <div>
 
@@ -16,5 +18,8 @@ Diagnosis : <%= @patient.diagnosis %>
 <div>
 Birthday Date: <%= @patient.born_on %>
 </div>
-
+<div>
+name of doctor : <%= @doctor.name %>
+</div>
 <form
+

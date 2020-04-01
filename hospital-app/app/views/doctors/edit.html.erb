@@ -1,0 +1,23 @@
+<h1>Edit the existing Doctor</h1>
+
+<%= form_for @doctor do |f| %>
+  <p>
+    <%= f.label :name%>
+    <%= f.text_field:name %>
+  </p>
+  <p>
+    <%= f.label :family_name %>
+    <%= f.text_field :family_name%>
+  </p>
+  <p>
+    <%= f.label :zip_code %>
+    <%= f.text_field :zip_code %>
+  </p>
+  <p>
+    <%= f.label :specialty%>
+    <%= f.text_field :specialty%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
