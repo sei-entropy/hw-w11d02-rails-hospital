@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   delete 'patients/:id', to: 'patients#destroy'
   get 'patients/:id', to: "patients#show", as: 'patient'
 
+  resources :doctors
+
+  get 'doctors/edit/:id', to: 'doctors#edit', as: 'doc_edit'
+
   root to: 'patients#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
