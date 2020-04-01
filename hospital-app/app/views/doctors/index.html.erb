@@ -1,0 +1,24 @@
+<h1>All the Doctors</h1>
+
+<% @doctors.each do |doctor| %>
+<div>
+    Name: <%= link_to doctor.name, doctor %> </div>
+<div>
+    Family Name: <%= doctor.family_name %>
+</div>
+<div>
+    Zip Code: <%= doctor.zip_code %>
+</div>
+<div>
+    Specialty : <%= doctor.specialty %>
+</div>
+<div>
+    <%= link_to "Edit", doc_edit_path(doctor.id) %> |
+    <%= link_to "Delete", doctor, :method => :delete %>
+</div>
+<hr>
+<% end %>
+
+<div>
+    <%= link_to "Add New Doctor",  new_doctor_path %>
+</div>
