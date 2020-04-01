@@ -7,6 +7,7 @@ def index
 end
 def new
     @doctor = Doctor.new()
+ 
 end
 
 def create
@@ -32,6 +33,6 @@ end
 
 private
 def doctor_params
- params.require(:doctor).permit(:first_name , :last_name , :diagnosis ,:born_on)
+ params.require(:doctor).permit( :name, :family_name, :zip_code,:specialty)
 end
 end

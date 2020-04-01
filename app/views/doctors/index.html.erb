@@ -1,7 +1,7 @@
 <h2> All Doctors</h2>
 <%= @doctors.each do |doctor|%>
 <div>
-<%=link_to doctor.first_name ,doctor%>
+<%=link_to doctor.name ,doctor%>
 <%=link_to 'Destroy' ,doctor_path(doctor) ,method: :delete, data: { confirm: 'Are you sure?' }%>
 </div>
 <%end %>
