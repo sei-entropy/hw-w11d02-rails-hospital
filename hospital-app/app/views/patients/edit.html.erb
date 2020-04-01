@@ -1,3 +1,5 @@
 <h1>Edit Patient</h1>
 
+<%= render partial: 'validator', locals: { patient: @patient } %>
+
 <%= render partial: 'form', locals: { patient: @patient } %>

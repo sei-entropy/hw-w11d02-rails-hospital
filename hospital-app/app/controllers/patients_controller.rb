@@ -16,9 +16,11 @@ class PatientsController < ApplicationController
   def update
     @patient = Patient.find(params[:id])
 
-    @patient.update(patient_params)
-
-    redirect_to @patient
+    if @patient.update(patient_params)
+      redirect_to @patient
+    else
+      render 'edit'
+    end
   end
 
   def edit
@@ -32,9 +34,11 @@ class PatientsController < ApplicationController
   def create
     @patient = Patient.new(patient_params)
 
-    @patient.save
-
-    redirect_to @patient
+    if @patient.save
+      redirect_to @patient
+    else
+      render 'new'
+    end
   end
 
   private
