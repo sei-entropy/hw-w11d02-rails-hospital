@@ -1,0 +1,28 @@
+<h2>All Patients</h2>
+
+<%= link_to 'Add Patients', patients_new_path %>
+
+
+<table class="striped bordered">
+  <tr>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>Date_of_Birth</th>
+    <th>Diagnosis</th>
+    <th>edit_Patients</th>
+    <th>delete_Patients</th>
+  </tr>
+
+  <% @patients.each do |person| %>
+      <tr>
+        <td><%= link_to person.first_name, person %></td>
+        <td><%=  person.last_name %></td>
+        <td><%= person.born_on %></td>
+        <td><%= person.diagnosis %></td>
+        <td> <%= link_to 'edit', patients_edit_path(person) %></td>
+        <td><a data-confirm="Are you sure you want to delete <%= person.first_name %>?" data-method="delete" href="/patients/delete/<%= person.id %>" rel="nofollow"><i>Delete Artist</i>
+        </a>
+        </td>
+      </tr>
+  <% end %>
+</table>

@@ -1,0 +1,27 @@
+<h2>All Doctors</h2>
+<%= link_to 'Add Doctors', doctor_new_path %>
+<br><br>
+
+<table class="striped bordered">
+  <tr>
+    <th>first name</th>
+    <th>last name</th>
+    <th>specialty</th>
+    <th>zip code</th>
+  </tr>
+
+  <% @doctors.each do |doctor| %>
+      <tr>
+        <td><%= link_to doctor.name, doctor %></td>
+        <td><%=  doctor.family_name %></td>
+        <td><%= doctor.specialty %></td>
+        <td><%= doctor.zip_code %></td>
+
+        <td> <%= link_to 'edit', doctor_edit_path(doctor) %></td>
+        <td><a data-confirm="Are you sure you want to delete <%= doctor.name %>?" data-method="delete" href="/doctors/delete/<%= doctor.id %>" rel="nofollow"><i>Delete</i>
+        </a>
+        </td>
+
+      </tr>
+  <% end %>
+</table>
