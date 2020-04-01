@@ -8,8 +8,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <header>
+  <% if patients_signed_in? %>
+  <p>
+  Welcome <%= current_patients.email %>
+</p>
+<% end %>
+<nav>
+<ul>
+<% if patients_sign_out? %>
+  <li><%= link_to 'Sign Out', destroy_patients_session_path, method: :delete %></li>
+<% end %>
+</ul>
+</nav>
+</header>
   <body>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

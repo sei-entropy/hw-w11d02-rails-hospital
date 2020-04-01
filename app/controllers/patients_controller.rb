@@ -1,4 +1,5 @@
 class PatientsController < ApplicationController
+    before_action :authenticate_patients!, only: [:new]   
 def show 
     @patient = Patient.find(params[:id])
 end
