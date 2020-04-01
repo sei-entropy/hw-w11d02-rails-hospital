@@ -38,3 +38,6 @@ patients = Patient.all
 renad = Patient.find(1)
 afnan = Patient.find(2)
 reem = Patient.find(3)
+
+
+rails g migration AddDoctorToPatients doctor:references
