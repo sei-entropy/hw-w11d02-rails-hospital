@@ -1,0 +1,25 @@
+<h1> All Doctors </h1>
+
+
+<%= link_to 'New Doctor',  new_doctor_path %>
+    <table>
+  <tr>
+    <th> name </th>
+    <th> Family Name  </th>
+
+
+  </tr>
+ 
+  <% @doctors.each do |doctor| %>
+    <td> <%= doctor.name %></td>
+      <td><%= doctor.family_name %></td>
+
+
+      <td><%= link_to 'Show' , doctor_path(doctor) %></td>
+      <td><%= link_to 'Edit', edit_doctor_path(doctor)%></td>
+      <td><%= link_to 'Destroy', doctor_path(doctor.id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
