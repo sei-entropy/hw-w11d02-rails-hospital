@@ -1,2 +1,21 @@
 <h2>Add a new patient</h2>
-<%= render 'form'%>
+
+<% if @patient.errors.any? %>
+    <h3>We've got problems!</h3>
+
+    <h4>
+        <%= pluralize(@patient.errors.count, 'error') %>
+        stopped us from saving the task:
+    </h4>
+
+    <ul>
+        <% @patient.errors.full_messages.each do |msg|%>
+            <li> 
+                <%= msg %>
+            </li>
+        <% end %>
+    </ul>
+
+<% end %>
+
+<%= render 'form', locals: { patient: @patient }%>

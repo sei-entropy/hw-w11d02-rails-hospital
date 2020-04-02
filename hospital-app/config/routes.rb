@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+  devise_for :users
+  devise_for :models
   get 'patients/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'patients#index'
-  resources :patients
+  root 'welcome#index'
+  resources :patients, :doctors
 
 end

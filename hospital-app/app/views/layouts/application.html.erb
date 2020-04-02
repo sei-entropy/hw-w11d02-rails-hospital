@@ -10,14 +10,25 @@
   </head>
 
   <body>
-    <div>
+    <header>
+        <% if user_signed_in? %>
+      <p>
+      Welcome <%= current_user.email %>
+      </p>
+      <% end %>
     <nav>
       <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Add a patient", new_patient_path%></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Patients", patients_path%></li>
+        <li><%= link_to "Doctors", doctors_path%></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <% end %>
       </ul>
-    </nav>
+    </header>
     </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

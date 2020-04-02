@@ -1,4 +1,4 @@
-<%= form_for @patient do |f| %>
+<%= form_for @doctor do |f| %>
   <div>
   	<%= f.label :first_name, 'First name'%>
   	<%= f.text_field :first_name%>
@@ -8,12 +8,12 @@
   	<%= f.text_field :last_name %>
   </div>
   <div>
-  	<%= f.label :diagnosis, 'Diagnosis' %>
-  	<%= f.text_field :diagnosis %>
+  	<%= f.label :zip_code, 'Zip code' %>
+  	<%= f.text_field :zip_code %>
   </div>
   <div>
-  	<%= f.label :born_on, 'Date of birth' %>
-  	<%= f.date_field :born_on %>
+  	<%= f.label :speciality, 'Speciality' %>
+  	<%= f.text_field :speciality %>
   </div>
   <%= f.submit%>
 <% end %>
