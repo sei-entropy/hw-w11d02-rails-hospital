@@ -1,7 +1,7 @@
 <h2> All Patients</h2>
-<%= @patients.each do |patient|%>
+<% @patients.each do |patient|%>
 <div>
-<%=link_to patient.first_name ,patient%>
+<%=link_to patient.first_name%>
 <%=link_to 'Destroy' ,patient_path(patient) ,method: :delete, data: { confirm: 'Are you sure?' }%>
 </div>
 <%end %>
