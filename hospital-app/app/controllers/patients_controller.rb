@@ -15,7 +15,6 @@ class PatientsController < ApplicationController
         def create
             
             @patient = Patient.create(params.require(:patient).permit(:first_name , :last_name , :diagnosis , :born_on))
-            @doctor = Doctor.create(params.require(:doctors).permit(:name ,:doctor_id))
 
             if @patient.save && @doctor.save
             redirect_to patients_path

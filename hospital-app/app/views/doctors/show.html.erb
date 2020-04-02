@@ -1,8 +1,10 @@
 <h2>Doctors <h2>
+
 <%= link_to 'Back', controller: 'doctors' %>
-<form>
+
 <div>
 
+<div>
 Name: <%= @doctor.name %>
 </div>
 
@@ -18,5 +20,9 @@ Zip Code : <%= @doctor.zip_code %>
 specialty : <%= @doctor.specialty %>
 </div>
 
+<div>
+Patient :
+ <%= @patient.first_name %> 
+ <%= @patient.last_name %> 
 
-<form
+</div>
