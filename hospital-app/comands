@@ -1,0 +1,43 @@
+chcp.com 1252
+
+rails new hospital-app --database=postgresql --skip-coffee --skip-turbolinks
+
+cd
+
+code .
+
+gem install sqlite3  
+
+username: "postgres"
+password: "0000"
+
+rails db:create db:migrate 
+
+rails g model Patient first_name:string last_name:string diagnosis:string born_on:date 
+
+
+rails g model Doctor first_name:string last_name:string zip_code:decimal specialty:string
+
+rails g controller Patients 
+rails g controller Doctors 
+
+renad = Patient.create(first_name: "Renad", last_name: "Alobaid", diagnosis: "sick", born_on: "31/3/2020")
+afnan = Patient.create(first_name: "Afnan", last_name: "Mt", diagnosis: "sick", born_on: "31/3/2019")
+reem = Patient.create(first_name: "Reem", last_name: "Ab", diagnosis: "flu", born_on: "31/3/2066")
+
+
+renad = Doctor.create(first_name: "Renad", last_name: "Alobaid", zip_code: "444", specialty: "31/3/2020")
+afnan = Doctor.create(first_name: "Afnan", last_name: "Mt", zip_code: "555", specialty: "31/3/2019")
+reem = Doctor.create(first_name: "Reem", last_name: "Ab", zip_code: "777", specialty: "31/3/2066")
+
+Patient.count 
+Doctor.count 
+
+patients = Patient.all
+
+renad = Patient.find(1)
+afnan = Patient.find(2)
+reem = Patient.find(3)
+
+
+rails g migration AddDoctorToPatients doctor:references
