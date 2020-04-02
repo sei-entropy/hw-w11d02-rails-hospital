@@ -1,0 +1,19 @@
+<%= form_for @doctor do |f| %>
+  <div>
+  	<%= f.label :first_name, 'First name'%>
+  	<%= f.text_field :first_name%>
+  </div>
+  <div>
+  	<%= f.label :last_name, 'Last name' %>
+  	<%= f.text_field :last_name %>
+  </div>
+  <div>
+  	<%= f.label :zip_code, 'Zip code' %>
+  	<%= f.text_field :zip_code %>
+  </div>
+  <div>
+  	<%= f.label :speciality, 'Speciality' %>
+  	<%= f.text_field :speciality %>
+  </div>
+  <%= f.submit%>
+<% end %>

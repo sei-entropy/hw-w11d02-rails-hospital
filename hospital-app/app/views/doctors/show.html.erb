@@ -1,0 +1,35 @@
+ <h2>Dr. <%= @doctor.first_name%> <%= @doctor.last_name%></h2> 
+
+ <h4>Doctor Information</h4>
+  <table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Zip Code</th>
+        <th>Speciality</th>
+    </tr>
+
+    <tr>
+        <td><%= @doctor.first_name%></td>
+        <td><%= @doctor.last_name%></td>
+        <td><%= @doctor.zip_code%></td>
+        <td><%= @doctor.speciality%></td>
+    </tr>
+</table><br><br>
+
+<h4>Assigned Patients:</h4>
+<% unless @patients.nil? %>
+    <% @patients.each do |patient|%>
+        <%= link_to  "#{patient.first_name} #{patient.last_name}", patient_path(patient)%>
+    <% end %>
+<% else %>
+    <p>No patients</p>
+<%end%>
+
+<%= form_for @doctor do |f| %>
+    <div>
+        <%= f.label :patient_id, 'Assign a patient'%>
+        <%= f.text_field :patient_id%>
+    </div>
+<%= f.submit %>
+ <%end%>
