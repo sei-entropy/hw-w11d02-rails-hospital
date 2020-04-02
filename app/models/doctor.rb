@@ -1,3 +1,3 @@
 class Doctor < ApplicationRecord
-has_many :patient  
+has_many :patients  
 end
